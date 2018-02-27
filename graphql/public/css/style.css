@@ -1,0 +1,146 @@
+
+/**
+header
+ */
+.header{
+    background:lightgreen;
+    box-shadow: 0 0 25px rgba(54, 54, 54, 0.7);
+    margin-bottom: 5rem;
+}
+ul#main_menu{
+    display:inline-block;
+    position:absolute;
+}
+ul#main_menu>li{
+    position: relative;
+    padding: 1rem 2rem;
+    border: none;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background-color: #4c228a;
+    color: #D6D6D6;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+ul#main_menu>li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 3px;
+    width: 0;
+    background-color: #fff;
+    transition: all 0.25s ease-in-out;
+}
+ul#main_menu>li:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: #fff;
+    transition: all 0.25s ease-in-out;
+}
+ul#main_menu>li:hover {
+    color: #fff;
+    background-color: #58518a;;
+}
+ul#main_menu>li:hover::before, button:hover::after {
+    width: 100%;
+}
+ul#main_menu>li>a{
+    color:#fff;
+    text-decoration: none;
+}
+div.lang_select{
+    position:absolute;
+    right:0;
+    top:2em;
+    border:0;
+}
+#auth{
+    padding:1em;
+}
+#auth form>div{
+    float:left;
+    width:50%;
+}
+#auth form>button{
+    float:left;
+    width:50%;
+}
+#auth input {
+    border:solid 1px #bdbfbb;
+    padding:.5em 0;
+}
+#auth a{
+    color:#fff;
+    text-decoration: none;
+}
+/**
+logo
+ */
+svg{
+    fill:white;
+}
+.logo_animate{
+    position:absolute;
+    fill: rgba(250, 250, 250, 0.6);
+    -webkit-animation:spin 3s linear infinite;
+    -moz-animation:spin 3s linear infinite;
+    animation:spin 3s linear infinite;
+
+}
+
+@-moz-keyframes spin {50% {-moz-transform: rotateY(20deg);}}
+@-webkit-keyframes spin {50% {-webkit-transform: rotateY(20deg);transform: rotateY(20deg);}}
+@keyframes spin {50% {-webkit-transform: rotateY(20deg);transform:rotateY(20deg);} }
+/**
+button
+ */
+button {
+    position: relative;
+    padding: 1rem 2rem;
+    border: none;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background-color: #58518a;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 3px;
+    width: 0;
+    background-color: #fff;
+    transition: all 0.25s ease-in-out;
+}
+button:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: #fff;
+    transition: all 0.25s ease-in-out;
+}
+button:hover {
+    color: #fff;
+}
+button:hover::before, button:hover::after {
+    width: 100%;
+}
+button.success{
+    background-color: #64eb6a;
+}
+button.danger{
+    background-color: #f07953;
+}
