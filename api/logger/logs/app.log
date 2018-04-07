@@ -39,3 +39,714 @@
   sqlState: '23000',
   index: 0,
   sql: 'insert into `users` () values ()' }
+[2018-02-28T12:31:41.559] [ERROR] crud-model - ERROR { Error: ER_DUP_ENTRY: Duplicate entry '' for key 'users_login_uindex'
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_DUP_ENTRY',
+  errno: 1062,
+  sqlMessage: 'Duplicate entry \'\' for key \'users_login_uindex\'',
+  sqlState: '23000',
+  index: 0,
+  sql: 'insert into `users` () values ()' }
+[2018-03-01T09:39:04.135] [ERROR] crud-model - ERROR { Error: ER_DUP_ENTRY: Duplicate entry '' for key 'users_login_uindex'
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_DUP_ENTRY',
+  errno: 1062,
+  sqlMessage: 'Duplicate entry \'\' for key \'users_login_uindex\'',
+  sqlState: '23000',
+  index: 0,
+  sql: 'insert into `users` () values ()' }
+[2018-03-01T09:45:10.470] [ERROR] crud-model - ERROR { Error: ER_DUP_ENTRY: Duplicate entry '' for key 'users_login_uindex'
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_DUP_ENTRY',
+  errno: 1062,
+  sqlMessage: 'Duplicate entry \'\' for key \'users_login_uindex\'',
+  sqlState: '23000',
+  index: 0,
+  sql: 'insert into `users` () values ()' }
+[2018-03-01T09:45:23.357] [ERROR] crud-model - ERROR { Error: ER_DUP_ENTRY: Duplicate entry '' for key 'users_login_uindex'
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_DUP_ENTRY',
+  errno: 1062,
+  sqlMessage: 'Duplicate entry \'\' for key \'users_login_uindex\'',
+  sqlState: '23000',
+  index: 0,
+  sql: 'insert into `users` () values ()' }
+[2018-03-01T09:46:59.445] [ERROR] crud-model - ERROR { Error: ER_DUP_ENTRY: Duplicate entry '' for key 'users_login_uindex'
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_DUP_ENTRY',
+  errno: 1062,
+  sqlMessage: 'Duplicate entry \'\' for key \'users_login_uindex\'',
+  sqlState: '23000',
+  index: 0,
+  sql: 'insert into `users` () values ()' }
+[2018-03-07T15:24:19.075] [ERROR] crud-model - ERROR { Error: ER_DUP_ENTRY: Duplicate entry '' for key 'users_login_uindex'
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_DUP_ENTRY',
+  errno: 1062,
+  sqlMessage: 'Duplicate entry \'\' for key \'users_login_uindex\'',
+  sqlState: '23000',
+  index: 0,
+  sql: 'insert into `users` () values ()' }
+[2018-03-07T15:27:19.866] [ERROR] crud-model - ERROR { Error: ER_DUP_ENTRY: Duplicate entry '' for key 'users_login_uindex'
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_DUP_ENTRY',
+  errno: 1062,
+  sqlMessage: 'Duplicate entry \'\' for key \'users_login_uindex\'',
+  sqlState: '23000',
+  index: 0,
+  sql: 'insert into `users` () values ()' }
+[2018-03-07T15:32:19.357] [ERROR] crud-model - ERROR { Error: ER_DUP_ENTRY: Duplicate entry '' for key 'users_login_uindex'
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_DUP_ENTRY',
+  errno: 1062,
+  sqlMessage: 'Duplicate entry \'\' for key \'users_login_uindex\'',
+  sqlState: '23000',
+  index: 0,
+  sql: 'insert into `users` () values ()' }
+[2018-03-07T15:32:19.380] [ERROR] crud-model - ERROR { Error: ER_DUP_ENTRY: Duplicate entry '' for key 'users_login_uindex'
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_DUP_ENTRY',
+  errno: 1062,
+  sqlMessage: 'Duplicate entry \'\' for key \'users_login_uindex\'',
+  sqlState: '23000',
+  index: 0,
+  sql: 'insert into `users` () values ()' }
+[2018-03-07T15:39:14.043] [ERROR] crud-model - ERROR { Error: ER_DUP_ENTRY: Duplicate entry '' for key 'users_login_uindex'
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_DUP_ENTRY',
+  errno: 1062,
+  sqlMessage: 'Duplicate entry \'\' for key \'users_login_uindex\'',
+  sqlState: '23000',
+  index: 0,
+  sql: 'insert into `users` () values ()' }
+[2018-03-10T12:51:17.886] [ERROR] crud-model - ERROR { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:1003:13)
+    at _exceptionWithHostPort (util.js:1024:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1195:14)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Protocol.handshake (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:52:23)
+    at Connection.connect (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:130:18)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:106:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL.acquireRawConnection (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:104:12)
+    at create (C:\projects\garcon\api\node_modules\knex\lib\client.js:275:23)
+    at tryPromise (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:347:22)
+    at tryPromise (C:\projects\garcon\api\node_modules\tarn\lib\utils.js:57:20)
+    at Promise (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:347:5)
+    at new Promise (<anonymous>)
+    at callbackOrPromise (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:338:10)
+    at Pool._create (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:294:5)
+    at Pool._doCreate (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:262:32)
+    at Pool._tryAcquireOrCreate (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:202:12)
+    at Pool.acquire (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:123:10)
+    at C:\projects\garcon\api\node_modules\knex\lib\client.js:328:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Function.Promise.attempt.Promise.try (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:39:29)
+    at Client_MySQL.acquireConnection (C:\projects\garcon\api\node_modules\knex\lib\client.js:327:34)
+  errno: 'ECONNREFUSED',
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 3306,
+  fatal: true }
+[2018-03-10T12:53:19.422] [ERROR] crud-model - ERROR { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:1003:13)
+    at _exceptionWithHostPort (util.js:1024:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1195:14)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Protocol.handshake (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:52:23)
+    at Connection.connect (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:130:18)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:106:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL.acquireRawConnection (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:104:12)
+    at create (C:\projects\garcon\api\node_modules\knex\lib\client.js:275:23)
+    at tryPromise (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:347:22)
+    at tryPromise (C:\projects\garcon\api\node_modules\tarn\lib\utils.js:57:20)
+    at Promise (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:347:5)
+    at new Promise (<anonymous>)
+    at callbackOrPromise (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:338:10)
+    at Pool._create (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:294:5)
+    at Pool._doCreate (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:262:32)
+    at Pool._tryAcquireOrCreate (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:202:12)
+    at Pool.acquire (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:123:10)
+    at C:\projects\garcon\api\node_modules\knex\lib\client.js:328:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Function.Promise.attempt.Promise.try (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:39:29)
+    at Client_MySQL.acquireConnection (C:\projects\garcon\api\node_modules\knex\lib\client.js:327:34)
+  errno: 'ECONNREFUSED',
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 3306,
+  fatal: true }
+[2018-03-10T12:54:55.406] [ERROR] crud-model - ERROR { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:1003:13)
+    at _exceptionWithHostPort (util.js:1024:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1195:14)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Protocol.handshake (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:52:23)
+    at Connection.connect (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:130:18)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:106:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL.acquireRawConnection (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:104:12)
+    at create (C:\projects\garcon\api\node_modules\knex\lib\client.js:275:23)
+    at tryPromise (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:347:22)
+    at tryPromise (C:\projects\garcon\api\node_modules\tarn\lib\utils.js:57:20)
+    at Promise (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:347:5)
+    at new Promise (<anonymous>)
+    at callbackOrPromise (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:338:10)
+    at Pool._create (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:294:5)
+    at Pool._doCreate (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:262:32)
+    at Pool._tryAcquireOrCreate (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:202:12)
+    at Pool.acquire (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:123:10)
+    at C:\projects\garcon\api\node_modules\knex\lib\client.js:328:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Function.Promise.attempt.Promise.try (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:39:29)
+    at Client_MySQL.acquireConnection (C:\projects\garcon\api\node_modules\knex\lib\client.js:327:34)
+  errno: 'ECONNREFUSED',
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 3306,
+  fatal: true }
+[2018-03-10T12:57:08.344] [ERROR] crud-model - ERROR { Error: connect ECONNREFUSED 127.0.0.1:3306
+    at Object._errnoException (util.js:1003:13)
+    at _exceptionWithHostPort (util.js:1024:20)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1195:14)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Protocol.handshake (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:52:23)
+    at Connection.connect (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:130:18)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:106:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL.acquireRawConnection (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:104:12)
+    at create (C:\projects\garcon\api\node_modules\knex\lib\client.js:275:23)
+    at tryPromise (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:347:22)
+    at tryPromise (C:\projects\garcon\api\node_modules\tarn\lib\utils.js:57:20)
+    at Promise (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:347:5)
+    at new Promise (<anonymous>)
+    at callbackOrPromise (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:338:10)
+    at Pool._create (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:294:5)
+    at Pool._doCreate (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:262:32)
+    at Pool._tryAcquireOrCreate (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:202:12)
+    at Pool.acquire (C:\projects\garcon\api\node_modules\tarn\lib\Pool.js:123:10)
+    at C:\projects\garcon\api\node_modules\knex\lib\client.js:328:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Function.Promise.attempt.Promise.try (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:39:29)
+    at Client_MySQL.acquireConnection (C:\projects\garcon\api\node_modules\knex\lib\client.js:327:34)
+  errno: 'ECONNREFUSED',
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 3306,
+  fatal: true }
+[2018-03-13T14:52:33.295] [ERROR] user-model - ERROR Error: Undefined binding(s) detected when compiling SELECT query: select * from `users` where `login` = ? and `password` = ?
+    at QueryCompiler_MySQL.toSQL (C:\projects\garcon\api\node_modules\knex\lib\query\compiler.js:151:13)
+    at Builder.toSQL (C:\projects\garcon\api\node_modules\knex\lib\query\builder.js:115:44)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:52:32
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:574:26)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Async._drainQueue (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\async.js:133:16)
+    at Async._drainQueues (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\async.js:143:10)
+    at Immediate.Async.drainQueues [as _onImmediate] (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\async.js:17:14)
+    at runCallback (timers.js:756:18)
+    at tryOnImmediate (timers.js:717:5)
+    at processImmediate [as _immediateCallback] (timers.js:697:5)
+[2018-03-13T14:54:15.523] [ERROR] user-model - ERROR Error: Undefined binding(s) detected when compiling SELECT query: select * from `users` where `login` = ? and `password` = ?
+    at QueryCompiler_MySQL.toSQL (C:\projects\garcon\api\node_modules\knex\lib\query\compiler.js:151:13)
+    at Builder.toSQL (C:\projects\garcon\api\node_modules\knex\lib\query\builder.js:115:44)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:52:32
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:574:26)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Async._drainQueue (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\async.js:133:16)
+    at Async._drainQueues (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\async.js:143:10)
+    at Immediate.Async.drainQueues [as _onImmediate] (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\async.js:17:14)
+    at runCallback (timers.js:756:18)
+    at tryOnImmediate (timers.js:717:5)
+    at processImmediate [as _immediateCallback] (timers.js:697:5)
+[2018-04-01T18:29:26.249] [ERROR] menu-model - ERROR { Error: ER_NON_UNIQ_ERROR: Column 'id' in where clause is ambiguous
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_NON_UNIQ_ERROR',
+  errno: 1052,
+  sqlMessage: 'Column \'id\' in where clause is ambiguous',
+  sqlState: '23000',
+  index: 0,
+  sql: 'select * from `menus` left join `dish_types` on `menus`.`id` = `dish_types`.`menu_id` where `id` = \'restaurant_id\'' }
+[2018-04-01T18:30:31.405] [ERROR] menu-model - ERROR { Error: ER_NON_UNIQ_ERROR: Column 'id' in where clause is ambiguous
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_NON_UNIQ_ERROR',
+  errno: 1052,
+  sqlMessage: 'Column \'id\' in where clause is ambiguous',
+  sqlState: '23000',
+  index: 0,
+  sql: 'select * from `menus` left join `dish_types` on `menus`.`id` = `dish_types`.`menu_id` where `id` = \'1\'' }
+[2018-04-01T18:31:09.449] [ERROR] menu-model - ERROR { Error: ER_NON_UNIQ_ERROR: Column 'id' in where clause is ambiguous
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_NON_UNIQ_ERROR',
+  errno: 1052,
+  sqlMessage: 'Column \'id\' in where clause is ambiguous',
+  sqlState: '23000',
+  index: 0,
+  sql: 'select * from `menus` left join `dish_types` on `menus`.`id` = `dish_types`.`menu_id` where `id` = 1' }

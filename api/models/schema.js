@@ -10,7 +10,14 @@ module.exports = schema = {
 		session_id:['string'],
 		group:['integer']
 	},
-	restorans:{
+	restaurant:{
 
-	}
+	},
+	menu:{
+
+	},
+	restaurant_photo:{
+
+	},
+	dish_types:{}
 };

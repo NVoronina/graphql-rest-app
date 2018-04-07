@@ -1,0 +1,10 @@
+.restaurant_block{
+    padding: 2em;
+    text-align: center;
+}
+img.restaurant_photo:first-child{
+    width: 100%;
+}
+img.restaurant_photo{
+    width: 50%;
+}

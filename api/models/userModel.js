@@ -26,6 +26,18 @@ class UserModel extends CrudModel {
 			return err;
 		}
 	}
+	async getByLoginPassword(login, password){
+		try {
+			return await this.db(this.table)
+				.select('*')
+				.where('login', login)
+				.andWhere('password', password);
+		}
+		catch(err) {
+			logger.error('ERROR', err);
+			return err;
+		}
+	}
 }
 
 module.exports = new UserModel();

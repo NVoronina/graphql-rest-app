@@ -2,15 +2,40 @@
 const userModel = require('./../../models/userModel');
 
 module.exports.getList = async (req, res)=>{
-	try {
-		const info = await userModel.getAll(25);
-		if (info._status) {
-			res.status(info._status).send(info);
-		} else {
-			res.send(info);
+	if(req.query.login) {
+		try {
+			const info = await userModel.getBy('login', req.query.login);
+			if (info._status) {
+				res.status(info._status).send(info);
+			} else {
+				res.send(info);
+			}
+		} catch (err) {
+			//TODO error handler
 		}
-	} catch (err){
-		//TODO error handler
+
+	} else if(req.query.token){
+		try {
+			const info = await userModel.getBy('token', req.query.token);
+			if (info._status) {
+				res.status(info._status).send(info);
+			} else {
+				res.send(info);
+			}
+		} catch (err) {
+			//TODO error handler
+		}
+	} else {
+		try {
+			const info = await userModel.getAll(25);
+			if (info._status) {
+				res.status(info._status).send(info);
+			} else {
+				res.send(info);
+			}
+		} catch (err) {
+			//TODO error handler
+		}
 	}
 
 };

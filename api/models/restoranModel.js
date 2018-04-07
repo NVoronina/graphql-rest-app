@@ -1,13 +1,13 @@
 const CrudModel = require('./common/crudModel');
 const CheckIt = require('checkit');
-const logger = require('../logger')('restoran-model');
+const logger = require('../logger')('restaurant-model');
 
-class RestoranModel extends CrudModel {
+class RestaurantModel extends CrudModel {
 	constructor() {
 		super();
-		this.table = 'restorans';
+		this.table = 'restaurant';
 		this.schema = require('./schema');
-		this.checkit = new CheckIt(this.schema.restorans);
+		this.checkit = new CheckIt(this.schema.restaurant);
 	}
 
 	async validate(items){
@@ -28,4 +28,4 @@ class RestoranModel extends CrudModel {
 	}
 }
 
-module.exports = new RestoranModel();
+module.exports = new RestaurantModel();

@@ -1,3 +1,8 @@
-/**
- * Created by Natalia on 27.02.2018.
- */
+var common = {
+	en: {
+		title: "LeGarcon | Application for restaurants"
+	},
+	ru: {
+		title: "LeGarcon | Приложение для ресторанов"
+	}
+};

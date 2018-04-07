@@ -1,5 +1,4 @@
 const graphql = require('graphql');
-const restoranType = require('../restorans/restoranSchema');
 
 module.exports = userType = new graphql.GraphQLObjectType({
 	name: 'User',
@@ -9,6 +8,12 @@ module.exports = userType = new graphql.GraphQLObjectType({
 		},
 		id: {
 			type:graphql.GraphQLID
+		},
+		firstname: {
+			type:graphql.GraphQLString
+		},
+		lastname: {
+			type:graphql.GraphQLString
 		}
 	}
 });
