@@ -2,8 +2,9 @@ const graphql = require('graphql');
 const user = require('./users/index');
 const restorans = require('./restaurant/index');
 const menu = require('./menu/index');
+const dishes = require('./dishes/index');
 
-const commonObject = Object.assign(user, restorans, menu);
+const commonObject = Object.assign(user, restorans, menu, dishes);
 
 const schema = new graphql.GraphQLSchema({
 	query: new graphql.GraphQLObjectType({

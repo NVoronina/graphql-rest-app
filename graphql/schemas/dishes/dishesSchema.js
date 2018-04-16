@@ -20,6 +20,12 @@ module.exports = dishesType = new graphql.GraphQLObjectType({
 		},
 		kkal:{
 			type:graphql.GraphQLInt
+		},
+		price: {
+			type:graphql.GraphQLFloat
+		},
+		photo: {
+			type:graphql.GraphQLString
 		}
 	}
 });

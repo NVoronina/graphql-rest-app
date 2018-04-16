@@ -16,7 +16,7 @@ app.use('/graphql',graphqlHTTP({
 		graphiql: true,
 
 }));
-app.use(express.static('public'));
+app.use(express.static('./public'));
 
 app.get('/', async (req, res) => {
 	await getHtml('index.html', res);
@@ -31,6 +31,33 @@ app.get('/restaurants', async (req, res) => {
 	await getHtml('restaurants.html', res);
 });
 app.get('/restaurants/:id', async (req, res) => {
+	await getHtml('restaurant.html', res);
+});
+
+app.get('/guest/:id', async (req, res) => {
+	await getHtml('guest_restaurant.html', res);
+});
+
+app.get('/waitress/:id', async (req, res) => {
+	//TODO
+	await getHtml('restaurant.html', res);
+});
+
+app.get('/admin/:id', async (req, res) => {
+	//TODO
+	await getHtml('restaurant.html', res);
+});
+
+app.get('/admin', async (req, res) => {
+	//TODO
+	await getHtml('restaurant.html', res);
+});
+app.get('/admin/restaurants', async (req, res) => {
+	//TODO
+	await getHtml('restaurant.html', res);
+});
+app.get('/admin/menus', async (req, res) => {
+	//TODO
 	await getHtml('restaurant.html', res);
 });
 async function getHtml(fileName, res){

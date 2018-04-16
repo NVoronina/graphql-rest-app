@@ -21,6 +21,7 @@ header
     background:lightgreen;
     box-shadow: 0 0 25px rgba(54, 54, 54, 0.7);
     margin-bottom: 5rem;
+    max-height: 12em;
 }
 @font-face {
     font-family: "Dancing Script";
@@ -29,6 +30,7 @@ header
 /**
 logo
  */
+
 svg{
     fill:white;
     width:100px;
@@ -45,15 +47,79 @@ svg{
     color:#fff;
     font-family: "Dancing Script", sans-serif;
     font-size: 3em;
-    float:left;
 }
 /*@-moz-keyframes spin {50% {-moz-transform: rotateY(20deg);}}*/
 /*@-webkit-keyframes spin {50% {-webkit-transform: rotateY(20deg);transform: rotateY(20deg);}}*/
 @keyframes spin {25% {transform:rotateY(0deg);} 50% {transform:rotateY(5deg);} 75% {transform:rotateY(10deg);} }
 
+i.fa-close-icon{
+    color: white;
+    font-size: 1em;
+    padding:.5em;
+    position:fixed;
+    right:11em;
+    top:0;
+    z-index: 10;
+}
+ul#main_menu_device{
+    position:fixed;
+    right:0;
+    top:0;
+    z-index:6;
+}
+ul#main_menu_device>li{
+    position: relative;
+    padding: 1rem 2rem;
+    border: none;
+    font-size: 16px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    background-color: #4c228a;
+    color: #D6D6D6;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+ul#main_menu_device>li:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 3px;
+    width: 0;
+    background-color: #fff;
+    transition: all 0.25s ease-in-out;
+}
+ul#main_menu_device>li:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: #fff;
+    transition: all 0.25s ease-in-out;
+}
+ul#main_menu_device>li:hover {
+    color: #fff;
+    background-color: #58518a;;
+}
+ul#main_menu_device>li:hover::before, button:hover::after {
+    width: 100%;
+}
+ul#main_menu_device>li>a{
+    color:#fff;
+    text-decoration: none;
+}
+.hide{
+    display:none;
+}
+.show{
+    display:block;
+}
+
 ul#main_menu{
-    display:inline-block;
-    position:absolute;
+    margin:0 1rem;
+    padding:0 1em;
 }
 ul#main_menu>li{
     position: relative;
@@ -99,9 +165,9 @@ ul#main_menu>li>a{
     text-decoration: none;
 }
 div.lang_select{
-    position:absolute;
-    right:0;
-    top:0;
+    /*position:absolute;*/
+    /*right:0;*/
+    /*top:0;*/
     border:0;
 }
 div.lang_select select{
@@ -129,16 +195,29 @@ p.welcome{
     color:#fff;
     text-decoration: none;
 }
-
+i.fa-navbar{
+    color:white;
+    font-size: 3rem;
+    padding: .1em .7em 1em 0;
+}
+div#dark_background{
+    position:absolute;
+    top:0;
+    width:100%;
+    height:100%;
+    background:black;
+    opacity:0.6;
+    z-index:5;
+}
 /**
 button
  */
 button {
     position: relative;
-    padding: 1rem 2rem;
+    padding: .8rem;
     border: none;
     font-size: 14px;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     background-color: #58518a;
     color: #fff;

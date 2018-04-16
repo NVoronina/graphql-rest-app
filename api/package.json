@@ -14,9 +14,12 @@
     "cors": "^2.8.4",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
+    "jsqr": "^1.0.4",
     "knex": "^0.14.2",
     "log4js": "2.5.3",
     "mysql": "^2.15.0",
-    "sha1": "^1.1.1"
+    "qrcode-reader": "^1.0.4",
+    "sha1": "^1.1.1",
+    "node-fetch": "1.5.1"
   }
 }

@@ -20,3 +20,7 @@ var auth_form = {
 	},
 
 };
+var qr_reader = {
+	en: 'Read QR Code',
+	ru: 'Считать QR код'
+};
