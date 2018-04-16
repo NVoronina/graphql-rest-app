@@ -40,7 +40,7 @@ function getRestoransList(){
 				html +=	'</ul></div>';
 				html += '<div class="col-md-6">';
 				for(var i = 0; i < rest.data.restaurant.photos.length; i++){
-					html += `<img class="restaurant_photo" src="../assets/images/${url[url.length-1]}/${rest.data.restaurant.photos[i].photo}">`;
+					html += `<img class="restaurant_photo" src="../assets/images/restaurant/${url[url.length-1]}/${rest.data.restaurant.photos[i].photo}">`;
 				}
 
 				html += '</div>';
@@ -55,7 +55,7 @@ function getRestoransList(){
 function menuModalShow(el){
 	var id = el.id.replace('menu_', '');
 	var xhr = ajaxGet(`?query={ 
-					menu(id:${id}){ id, name_${lang}, dish_type(id:${id}){id, name_${lang}}}
+					menu(id:${id}){ id, name_${lang}, dish_type(id:${id}){id, name_${lang}}}}
 					`);
 	xhr.onreadystatechange = function() { // (3)
 		if (xhr.readyState != 4) return;
@@ -103,5 +103,6 @@ function getContent(){
 	getMenu();
 	getHeader();
 	getRestoransList();
+	getQrReader();
 }
 getContent();

@@ -19,5 +19,6 @@ module.exports = schema = {
 	restaurant_photo:{
 
 	},
-	dish_types:{}
+	dish_types:{},
+	dishes:{}
 };

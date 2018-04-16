@@ -102,5 +102,6 @@ function getContent(){
 	getMenu();
 	getRegForm();
 	getHeader();
+	getQrReader();
 }
 getContent();

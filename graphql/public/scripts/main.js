@@ -12,7 +12,10 @@ var config = {
 };
 
 var lang = getUserLanguage();
+// media collapse navbar
+var media = window.matchMedia("(max-width: 845px)");
 
+media.addListener(getMenu); // Attach listener function on state changes
 function ajaxGet(url){
 	var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
 	var xhr = new XHR();
@@ -50,15 +53,41 @@ function getCookie(name) {
 function getHeader(){
 	document.querySelector('title').innerText = common[lang].title;
 }
-function getMenu(){
+function activateMenu(){
+	document.querySelector('#dark_background').className = 'show';
 	var menu_list = '';
 	var href = ['/', '/about', '/news', '/restaurants'];
 	var cnt = 0;
+	menu_list += '<i class="fa fa-times fa-close-icon" onclick="closeMenu(this)"></i><ul class="nav navbar-nav main_menu" id="main_menu_device">';
 	for(var li of main_menu[lang]){
 		menu_list += '<li><a href="'+href[cnt]+'">'+li+'</a></li>';
 		cnt++;
 	}
-	document.getElementById('main_menu').innerHTML = menu_list;
+	menu_list += '</ul>';
+	document.getElementById('menu_header').innerHTML = menu_list;
+
+}
+function closeMenu(){
+	document.getElementById('main_menu_device').parentNode.innerHTML = '<i onclick="activateMenu()" class="fa fa-bars fa-navbar"></i>';
+	document.querySelector('#dark_background').className = 'hide';
+
+}
+function getMenu(){
+	var menu_list = '';
+	var href = ['/', '/about', '/news', '/restaurants'];
+	var cnt = 0;
+	var media = window.matchMedia("(max-width: 845px)");
+	if (media.matches) { // If media query matches
+		menu_list += '<i onclick="activateMenu()" class="fa fa-bars fa-navbar"></i>';
+	} else {
+		menu_list = '<ul class="nav navbar-nav main_menu" id="main_menu">';
+		for(var li of main_menu[lang]){
+			menu_list += '<li><a href="'+href[cnt]+'">'+li+'</a></li>';
+			cnt++;
+		}
+		menu_list += '</ul>';
+	}
+	document.getElementById('menu_header').innerHTML = menu_list;
 }
 function getAuthForm(){
 	var token = getCookie('token');
@@ -98,6 +127,56 @@ function getAuthForm(){
 		document.querySelector('#auth').innerHTML = html;
 		document.getElementById('auth_form').onsubmit = authoraizeUser;
 	}
+}
+function getQrReader(){
+	document.getElementById('qr_reader').innerHTML = `
+            <button onclick="videoStream()" class="danger col">${qr_reader[lang]}</button>    
+	`;
+}
+function videoStream(){
+	document.getElementById('video_block').className = 'show';
+	var	videoGo = document.getElementById("video"),
+		videoObj = { "video": true },
+		errBack = function(error) {
+			console.log("Ошибка видео захвата: ", error.code);
+		};
+	var constraints = { audio: false, video: { width: 100, height: 100 } };
+	navigator.mediaDevices.getUserMedia(constraints).then(function (mediaStream) {
+		videoGo.srcObject = mediaStream;
+		setTimeout(function(){
+			var canvasElement = document.querySelector('canvas'),
+				video = document.querySelector('video#video'),
+				image = document.querySelector('img#snap'),
+
+				context = canvasElement.getContext('2d');
+			canvasElement.width = video.width;
+			canvasElement.height = 10;
+			context.drawImage(video, 0, 0, 10, 10);
+			var imageData = context.getImageData(0, 0, 10, 10);
+			console.log(imageData.data);
+			var imageDataURL = canvasElement.toDataURL('image/png');
+			image.setAttribute('src', imageDataURL);
+			var imageDataSend = JSON.stringify({
+				file:imageDataURL
+			});
+			var xhr = ajaxPost('qr-code', imageDataSend);
+			xhr.onreadystatechange = function() { // (3)
+				if (xhr.readyState != 4) return;
+				if (xhr.status != 200) {
+					console.log(xhr.status + ': ' + xhr.statusText);
+				} else {
+					//var data = JSON.parse(xhr.responseText);
+					console.log(xhr.status + ': ' + xhr.statusText);
+					console.log(videoGo);
+					mediaStream.getTracks().forEach(function (track) { track.stop(); });
+					document.getElementById('video_block').className = 'hide';
+					// document.cookie = `user=${data.id}`;
+					// вывести результат
+					// window.location.href = '/';
+				}
+			}
+		},3000);
+	});
 }
 function authoraizeUser(event){
 	event.preventDefault();
@@ -174,7 +253,6 @@ function deleteCookie(name) {
 function getActiveLanguage(){
 	document.querySelector('option[value="'+lang+'"]').setAttribute('selected', 'selected');
 }
-
 document.getElementById('language').onchange = function(){
 	deleteCookie('lang');
 	setCookie('lang', this.value);

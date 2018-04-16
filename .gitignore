@@ -1,3 +1,4 @@
 .idea
 api/node_modules
 graphql/node_modules
+api/logger/logs/app.log

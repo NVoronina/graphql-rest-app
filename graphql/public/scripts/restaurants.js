@@ -39,6 +39,6 @@ function getContent(){
 	getMenu();
 	getHeader();
 	getRestaurantInfo();
-	console.log(document.cookie);
+	getQrReader();
 }
 getContent();

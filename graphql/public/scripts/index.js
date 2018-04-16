@@ -3,5 +3,6 @@ function getContent(){
 	getActiveLanguage();
 	getMenu();
 	getHeader();
+	getQrReader();
 }
 getContent();

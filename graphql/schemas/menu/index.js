@@ -20,5 +20,16 @@ module.exports = menu = {
 		resolve:  async (root, args)=>{
 			return await fetch(`${BASE_URL}/menu/${args.id}`).then(res => res.json());
 		}
+	},
+	menuByRestaurantId: {
+		type: menuType,
+		args:{
+			id: {
+				type: graphql.GraphQLID
+			}
+		},
+		resolve:  async (root, args)=>{
+			return await fetch(`${BASE_URL}/menu/restaurant/${args.id}`).then(res => res.json());
+		}
 	}
 };
