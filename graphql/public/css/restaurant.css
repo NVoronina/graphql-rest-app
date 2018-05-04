@@ -17,19 +17,14 @@ ul{
     margin-left:.2em;
 }
 ul>li{
-    padding:0;
+    padding:.5em;
     margin:0;
 }
-.restorans_menu>li:before{
-    content:'> ';
-    /*font-size:.8em;*/
-    font-weight:800;
-    margin-bottom: .1em;
-    color: #83728a;
-}
+
 .restorans_menu>li{
-    padding:.2em;
+    padding:1em;
     text-transform: uppercase;
+    cursor:pointer;
 }
 ul>li img{
     width:100%;

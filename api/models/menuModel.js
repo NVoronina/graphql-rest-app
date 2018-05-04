@@ -1,4 +1,4 @@
-const CrudModel = require('./common/crudModel');
+const CrudModel = require('./crudModel');
 const CheckIt = require('checkit');
 const logger = require('../logger')('menu-model');
 

@@ -190,13 +190,17 @@ function authoraizeUser(event){
 		if (xhr.status != 200) {
 			console.log(xhr.status + ': ' + xhr.statusText);
 		} else {
+			console.log(xhr.responseText);
 			var data = JSON.parse(xhr.responseText);
 			document.cookie = `user=${data.id}`;
+			document.cookie = `token=${data.token}`;
+
 			// вывести результат
-			window.location.href = '/';
+			getAuthForm();
 		}
 	}
 }
+console.log(document.cookie)
 function logout(){
 	var data = JSON.stringify({
 		id: getCookie('user')
@@ -249,6 +253,17 @@ function deleteCookie(name) {
 
 	setCookie(name, null, { expires: -1 })
 
+}
+function showNotation(text, type){
+	var div = document.createElement('div');
+	div.className = 'notation';
+	div.id = type+'notation';
+	div.innerText = text;
+	document.body.appendChild(div);
+	setTimeout(function(){
+		var elem = document.getElementById(type+'notation') ;
+		elem.parentNode.removeChild(elem);
+	},3000);
 }
 function getActiveLanguage(){
 	document.querySelector('option[value="'+lang+'"]').setAttribute('selected', 'selected');

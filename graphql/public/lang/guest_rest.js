@@ -11,6 +11,13 @@ var common = {
 		no_phone_common: "No common phone",
 		no_phone_tables_booked: "No booking phone",
 		order: "Order",
+		place_order: "Submit order",
+		get_waitress: "Garcon",
+		take_bill: "Bill",
+		success_order: "The order placed successful",
+		add_order: "Add to order",
+		welcome: "Welcome to "
+
 	},
 	ru: {
 		title: "LeGarcon | ",
@@ -24,6 +31,11 @@ var common = {
 		no_phone_common: "Телефон не указан",
 		no_phone_tables_booked: "Телефон для бронирования не указан",
 		order: "Заказать",
-
+		place_order: "Оформить заказ",
+		get_waitress: "Позвать официанта",
+		take_bill: "Попросить счет",
+		success_order: "Заказ успешно сформирован, ожидайте",
+		add_order: "Дозаказать",
+		welcome: "Добро пожаловать в "
 	}
 };

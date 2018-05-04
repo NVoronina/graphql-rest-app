@@ -1,7 +1,7 @@
 module.exports = {
 	...require('./getList'),
 	...require('./getOne'),
-	...require('./Reg'),
-	...require('./Auth'),
-	...require('./Logout'),
+	...require('./registrate'),
+	...require('./auth'),
+	...require('./logout'),
 };

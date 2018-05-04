@@ -20,5 +20,9 @@ module.exports = schema = {
 
 	},
 	dish_types:{},
-	dishes:{}
+	dishes:{},
+	cart:{},
+	cart_dishes:{},
+	order:{},
+	order_dishes:{}
 };
