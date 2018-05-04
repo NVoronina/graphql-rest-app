@@ -10,7 +10,7 @@ module.exports.getListByDishType = async (req, res)=>{
 			res.send(info);
 		}
 	} catch (err){
-		//TODO error handler
+		res.status(500).send(err);
 	}
 
 };

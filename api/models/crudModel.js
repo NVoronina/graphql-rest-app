@@ -1,5 +1,5 @@
-const DB = require('../../db');
-const logger = require('../../logger')('crud-model');
+const DB = require('../db/index');
+const logger = require('../logger/index')('crud-model');
 
 /**
  * Класс описывающий основные операции CRUD

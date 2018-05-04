@@ -3,7 +3,7 @@ const userModel = require('./../../models/userModel');
 const generateToken = require('./generateToken');
 const sha1 = require('sha1');
 
-module.exports.Auth = async (req, res)=>{
+module.exports.auth = async (req, res)=>{
 	try {
 		let password = sha1(req.body.password + req.body.login);
 
@@ -24,7 +24,7 @@ module.exports.Auth = async (req, res)=>{
 			res.send("No such user");
 		}
 	} catch (err){
-		//TODO error handler
+		res.status(500).send(err);
 	}
 
 };

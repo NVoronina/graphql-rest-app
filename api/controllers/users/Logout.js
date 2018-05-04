@@ -2,7 +2,7 @@
 const userModel = require('./../../models/userModel');
 const generateToken = require('./generateToken');
 
-module.exports.Logout = async (req, res)=>{
+module.exports.logout = async (req, res)=>{
 	try {
 		var data = {
 			token: '',
@@ -17,6 +17,6 @@ module.exports.Logout = async (req, res)=>{
 		}
 
 	} catch (err){
-		//TODO error handler
+		res.status(500).send(err);
 	}
 };

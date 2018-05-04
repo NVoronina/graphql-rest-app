@@ -3,7 +3,7 @@ const userModel = require('./../../models/userModel');
 const generateToken = require('./generateToken');
 const sha1 = require('sha1');
 
-module.exports.Reg = async (req, res)=>{
+module.exports.registrate = async (req, res)=>{
 	try {
 		let valid = await userModel.validate(req.body);
 		valid.token = await generateToken(32);
@@ -17,7 +17,7 @@ module.exports.Reg = async (req, res)=>{
 			res.send(user);
 		}
 	} catch (err){
-		//TODO error handler
+		res.status(500).send(err);
 	}
 
 };
