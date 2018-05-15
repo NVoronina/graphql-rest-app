@@ -19,6 +19,7 @@ const order = require('./controllers/order');
 const orderDishes = require('./controllers/orderDishes');
 const dishType = require('./controllers/dishType');
 const restaurantPhotos = require('./controllers/restaurantPhotos');
+const employee = require('./controllers/employee');
 
 app.set('trust proxy', 1);
 
@@ -103,9 +104,17 @@ app.get('/order-dishes/:token', async (req, res) => {
 app.post('/add-to-cart', async (req, res) => {
 	cart.addToCart(req,res);
 });
-
 app.get('/restaurant-photos/:id', async (req, res) => {
 	await restaurantPhotos.getRestaurantPhotos(req, res);
+});
+app.get('/waitress/:id', async (req, res) => {
+	await employee.getWaitress(req, res);
+});
+app.get('/free-order/:userId', async (req, res) => {
+	await order.getFreeOrders(req, res);
+});
+app.get('/waitress-orders/:userId', async (req, res) => {
+	await order.getOrdersByWaitress(req, res);
 });
 
 io.on('connection', function (socket) {

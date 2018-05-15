@@ -34,12 +34,16 @@ app.get('/restaurants/:id', async (req, res) => {
 	await getHtml('restaurant.html', res);
 });
 
+app.get('/restaurants/:id', async (req, res) => {
+	await getHtml('restaurant.html', res);
+});
+
 app.get('/guest/:restaurant/:table', async (req, res) => {
 	await getHtml('guest_restaurant.html', res);
 });
 
-app.get('/waitress/:id', async (req, res) => {
-	await getHtml('restaurant.html', res);
+app.get('/employee', async (req, res) => {
+	await getHtml('waitress.html', res);
 });
 
 app.get('/admin/:id', async (req, res) => {

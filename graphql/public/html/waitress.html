@@ -2,13 +2,12 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <title>Le Garcon</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Le Garcon</title>
     <link rel="stylesheet" href="../css/fontawesome-all.min.css"/>
     <link rel="stylesheet" href="../css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../css/style.css"/>
-
 </head>
 <body>
 <div class="header">
@@ -38,14 +37,14 @@
                 <div id="auth"></div>
                 <div id="qr_reader"></div>
             </div>
-            <div class="col lang_select">
-                <form>
-                    <select id="language">
-                        <option value="en"><img src=""> English</option>
-                        <option value="ru"><img src=""> Русский</option>
-                    </select>
-                </form>
-            </div>
+        </div>
+        <div class="col lang_select">
+            <form>
+                <select id="language">
+                    <option value="en"><img src=""> English</option>
+                    <option value="ru"><img src=""> Русский</option>
+                </select>
+            </form>
         </div>
         <div class="hide" id="video_block">
             <div id="tmp-img"></div>
@@ -57,22 +56,22 @@
 </div>
 <div class="container">
     <div class="row">
-        <div class="main col-md-12" id="content">
+        <div class="main col-md-12 col-12" id="content">
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="footer">
+<div class="footer">
+    <div class="container">
+        <div class="row" id="footer_info">
         </div>
     </div>
 </div>
 <div class="hide" id="dark_background"></div>
 <script type="text/javascript" src="../lang/header.js"></script>
 <script type="text/javascript" src="../lang/footer.js"></script>
-<script type="text/javascript" src="../lang/restaurant.js"></script>
+<script type="text/javascript" src="../lang/waitress.js"></script>
 
 <script type="text/javascript" src="../scripts/main.js"></script>
-<script type="text/javascript" src="../scripts/restaurant.js"></script>
+<script type="text/javascript" src="../scripts/waitress.js"></script>
 </body>
 </html>
