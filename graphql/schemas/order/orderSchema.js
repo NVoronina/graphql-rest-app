@@ -14,6 +14,18 @@ module.exports = orderType = new graphql.GraphQLObjectType({
 		},
 		employee_id: {
 			type: graphql.GraphQLID
+		},
+		dishes_id: {
+			type: graphql.GraphQLID
+		},
+		name_en: {
+			type: graphql.GraphQLString
+		},
+		name_ru: {
+			type: graphql.GraphQLString
+		},
+		status: {
+			type: graphql.GraphQLInt
 		}
 	}
 });

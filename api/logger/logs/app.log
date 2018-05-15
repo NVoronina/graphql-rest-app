@@ -1,0 +1,615 @@
+[2018-05-13T12:50:12.617] [ERROR] menu-model - ERROR { Error: ER_BAD_FIELD_ERROR: Unknown column 'employee.deleted' in 'where clause'
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'employee.deleted\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select * from `employees` left join `users` on `employees`.`user_id` = `users`.`id` left join `positions` on `employees`.`position_id` = `positions`.`id` where `employees`.`user_id` = \'25\' and `employee`.`deleted` = 0' }
+[2018-05-13T12:50:22.188] [ERROR] menu-model - ERROR { Error: ER_BAD_FIELD_ERROR: Unknown column 'employee.deleted' in 'where clause'
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'employee.deleted\' in \'where clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select * from `employees` left join `users` on `employees`.`user_id` = `users`.`id` left join `positions` on `employees`.`position_id` = `positions`.`id` where `employees`.`user_id` = \'25\' and `employee`.`deleted` = 0' }
+[2018-05-13T14:27:07.964] [ERROR] menu-model - ERROR { Error: ER_BAD_FIELD_ERROR: Unknown column 'employees.restaurant_id' in 'on clause'
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'employees.restaurant_id\' in \'on clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select * from `employees` left join `users` on `employees`.`user_id` = `users`.`id` left join `positions` on `employees`.`position_id` = `positions`.`id` left join `restaurant` on `employees`.`restaurant_id` = `restaurant`.`id` where `employees`.`user_id` = \'2\' and `employees`.`deleted` = 0' }
+[2018-05-13T14:27:47.326] [ERROR] menu-model - ERROR { Error: ER_BAD_FIELD_ERROR: Unknown column 'employees.restaurant_id' in 'on clause'
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'employees.restaurant_id\' in \'on clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select * from `employees` left join `users` on `employees`.`user_id` = `users`.`id` left join `positions` on `employees`.`position_id` = `positions`.`id` left join `restaurant` on `employees`.`restaurant_id` = `restaurant`.`id` where `employees`.`user_id` = \'2\' and `employees`.`deleted` = 0' }
+[2018-05-13T14:27:48.661] [ERROR] menu-model - ERROR { Error: ER_BAD_FIELD_ERROR: Unknown column 'employees.restorant_id' in 'on clause'
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'employees.restorant_id\' in \'on clause\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select * from `employees` left join `users` on `employees`.`user_id` = `users`.`id` left join `positions` on `employees`.`position_id` = `positions`.`id` left join `restaurant` on `employees`.`restorant_id` = `restaurant`.`id` where `employees`.`user_id` = \'2\' and `employees`.`deleted` = 0' }
+[2018-05-13T15:08:41.222] [ERROR] orders-model - ERROR { Error: ER_BAD_FIELD_ERROR: Unknown column 'order.id' in 'field list'
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'order.id\' in \'field list\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select `table`, `order`.`id` as `id`, `` from `orders` inner join `employees` on `orders`.`employee_id` = `employees`.`id` inner join `users` on `employees`.`user_id` = `users`.`id` left join `order_dishes` on `order`.`id` = `order_dishes`.`order_id` where `users`.`id` = \'26\'' }
+[2018-05-13T15:08:42.437] [ERROR] orders-model - ERROR { Error: ER_BAD_FIELD_ERROR: Unknown column 'order.id' in 'field list'
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'order.id\' in \'field list\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select `table`, `order`.`id` as `id`, `` from `orders` inner join `employees` on `orders`.`employee_id` = `employees`.`id` inner join `users` on `employees`.`user_id` = `users`.`id` left join `order_dishes` on `order`.`id` = `order_dishes`.`order_id` where `users`.`id` = \'26\'' }
+[2018-05-13T15:09:01.089] [ERROR] orders-model - ERROR { Error: ER_BAD_FIELD_ERROR: Unknown column 'order.id' in 'field list'
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'order.id\' in \'field list\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select `table`, `order`.`id` from `orders` inner join `employees` on `orders`.`employee_id` = `employees`.`id` inner join `users` on `employees`.`user_id` = `users`.`id` left join `order_dishes` on `order`.`id` = `order_dishes`.`order_id` where `users`.`id` = \'26\'' }
+[2018-05-13T15:09:01.926] [ERROR] orders-model - ERROR { Error: ER_BAD_FIELD_ERROR: Unknown column 'order.id' in 'field list'
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sqlMessage: 'Unknown column \'order.id\' in \'field list\'',
+  sqlState: '42S22',
+  index: 0,
+  sql: 'select `table`, `order`.`id` from `orders` inner join `employees` on `orders`.`employee_id` = `employees`.`id` inner join `users` on `employees`.`user_id` = `users`.`id` left join `order_dishes` on `order`.`id` = `order_dishes`.`order_id` where `users`.`id` = \'26\'' }
+[2018-05-13T15:15:51.943] [ERROR] orders-model - ERROR { Error: ER_NON_UNIQ_ERROR: Column 'restaurant_id' in field list is ambiguous
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_NON_UNIQ_ERROR',
+  errno: 1052,
+  sqlMessage: 'Column \'restaurant_id\' in field list is ambiguous',
+  sqlState: '23000',
+  index: 0,
+  sql: 'select `table`, `orders`.`id`, `order_dishes`.`dishes_id`, `dishes`.`name_ru`, `dishes`.`name_en`, `status`, `restaurant_id`, `employee_id` from `orders` inner join `employees` on `orders`.`employee_id` = `employees`.`id` inner join `users` on `employees`.`user_id` = `users`.`id` left join `order_dishes` on `orders`.`id` = `order_dishes`.`order_id` left join `dishes` on `order_dishes`.`dishes_id` = `dishes`.`id` where `users`.`id` = \'25\'' }
+[2018-05-13T15:16:20.526] [ERROR] orders-model - ERROR { Error: ER_NON_UNIQ_ERROR: Column 'restaurant_id' in field list is ambiguous
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_NON_UNIQ_ERROR',
+  errno: 1052,
+  sqlMessage: 'Column \'restaurant_id\' in field list is ambiguous',
+  sqlState: '23000',
+  index: 0,
+  sql: 'select `table`, `orders`.`id`, `order_dishes`.`dishes_id`, `dishes`.`name_ru`, `dishes`.`name_en`, `status`, `restaurant_id`, `employee_id` from `orders` inner join `employees` on `orders`.`employee_id` = `employees`.`id` inner join `users` on `employees`.`user_id` = `users`.`id` left join `order_dishes` on `orders`.`id` = `order_dishes`.`order_id` left join `dishes` on `order_dishes`.`dishes_id` = `dishes`.`id` where `users`.`id` = \'26\'' }
+[2018-05-13T15:16:21.927] [ERROR] orders-model - ERROR { Error: ER_NON_UNIQ_ERROR: Column 'restaurant_id' in field list is ambiguous
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_NON_UNIQ_ERROR',
+  errno: 1052,
+  sqlMessage: 'Column \'restaurant_id\' in field list is ambiguous',
+  sqlState: '23000',
+  index: 0,
+  sql: 'select `table`, `orders`.`id`, `order_dishes`.`dishes_id`, `dishes`.`name_ru`, `dishes`.`name_en`, `status`, `restaurant_id`, `employee_id` from `orders` inner join `employees` on `orders`.`employee_id` = `employees`.`id` inner join `users` on `employees`.`user_id` = `users`.`id` left join `order_dishes` on `orders`.`id` = `order_dishes`.`order_id` left join `dishes` on `order_dishes`.`dishes_id` = `dishes`.`id` where `users`.`id` = \'26\'' }
+[2018-05-13T15:17:02.915] [ERROR] orders-model - ERROR { Error: ER_NON_UNIQ_ERROR: Column 'restaurant_id' in field list is ambiguous
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_NON_UNIQ_ERROR',
+  errno: 1052,
+  sqlMessage: 'Column \'restaurant_id\' in field list is ambiguous',
+  sqlState: '23000',
+  index: 0,
+  sql: 'select `table`, `orders`.`id`, `order_dishes`.`dishes_id`, `dishes`.`name_ru`, `dishes`.`name_en`, `status`, `restaurant_id`, `employee_id` from `orders` inner join `employees` on `orders`.`employee_id` = `employees`.`id` inner join `users` on `employees`.`user_id` = `users`.`id` left join `order_dishes` on `orders`.`id` = `order_dishes`.`order_id` left join `dishes` on `order_dishes`.`dishes_id` = `dishes`.`id` where `users`.`id` = \'26\'' }
+[2018-05-13T21:38:14.308] [ERROR] orders-model - ERROR { Error: ER_NO_SUCH_TABLE: Table 'legarcon.restaurants' doesn't exist
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: 'Table \'legarcon.restaurants\' doesn\'t exist',
+  sqlState: '42S02',
+  index: 0,
+  sql: 'select * from `orders` left join `restaurants` on `orders`.`restaurant_id` = `restaurants`.`id` left join `employees` on `restaurants`.`id` = `employees`.`restaurant_id` where `orders`.`restaurant_id` = \'2\' and `orders`.`employee_id` is null' }
+[2018-05-13T21:38:35.181] [ERROR] orders-model - ERROR { Error: ER_NO_SUCH_TABLE: Table 'legarcon.restaurants' doesn't exist
+    at Query.Sequence._packetToError (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Sequence.js:52:14)
+    at Query.ErrorPacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\sequences\Query.js:77:18)
+    at Protocol._parsePacket (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:279:23)
+    at Parser.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Parser.js:76:12)
+    at Protocol.write (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:39:16)
+    at Socket.<anonymous> (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:103:28)
+    at Socket.emit (events.js:160:13)
+    at addChunk (_stream_readable.js:269:12)
+    at readableAddChunk (_stream_readable.js:256:11)
+    at Socket.Readable.push (_stream_readable.js:213:10)
+    at TCP.onread (net.js:602:20)
+    --------------------
+    at Protocol._enqueue (C:\projects\garcon\api\node_modules\mysql\lib\protocol\Protocol.js:145:48)
+    at Connection.query (C:\projects\garcon\api\node_modules\mysql\lib\Connection.js:208:25)
+    at C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:157:18
+    at Promise._execute (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\debuggability.js:303:9)
+    at Promise._resolveFromExecutor (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:483:18)
+    at new Promise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:79:10)
+    at Client_MySQL._query (C:\projects\garcon\api\node_modules\knex\lib\dialects\mysql\index.js:151:12)
+    at Client_MySQL.query (C:\projects\garcon\api\node_modules\knex\lib\client.js:205:17)
+    at Runner.<anonymous> (C:\projects\garcon\api\node_modules\knex\lib\runner.js:149:36)
+    at Runner.tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Runner.query (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\method.js:15:34)
+    at C:\projects\garcon\api\node_modules\knex\lib\runner.js:61:21
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\using.js:185:26
+    at tryCatcher (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:512:31)
+    at Promise._settlePromise (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:569:18)
+    at Promise._settlePromise0 (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:614:10)
+    at Promise._settlePromises (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:693:18)
+    at Promise._fulfill (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise.js:638:18)
+    at PromiseArray._resolve (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:126:19)
+    at PromiseArray._promiseFulfilled (C:\projects\garcon\api\node_modules\knex\node_modules\bluebird\js\release\promise_array.js:144:14)
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sqlMessage: 'Table \'legarcon.restaurants\' doesn\'t exist',
+  sqlState: '42S02',
+  index: 0,
+  sql: 'select * from `orders` left join `restaurants` on `orders`.`restaurant_id` = `restaurants`.`id` left join `employees` on `restaurants`.`id` = `employees`.`restaurant_id` where `orders`.`restaurant_id` = \'2\' and `orders`.`employee_id` is null' }

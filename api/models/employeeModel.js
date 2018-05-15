@@ -1,13 +1,13 @@
 const CrudModel = require('./crudModel');
 const CheckIt = require('checkit');
-const logger = require('../logger')('order-dishes-model');
+const logger = require('../logger')('menu-model');
 
-class OrderDishesModel extends CrudModel {
+class EmployeeModel extends CrudModel {
 	constructor() {
 		super();
-		this.table = 'order_dishes';
+		this.table = 'employees';
 		this.schema = require('./schema');
-		this.checkit = new CheckIt(this.schema.order_dishes);
+		this.checkit = new CheckIt(this.schema.employee);
 	}
 
 	async validate(items){
@@ -26,20 +26,22 @@ class OrderDishesModel extends CrudModel {
 			return err;
 		}
 	}
-	async getByToken(token){
+	async getWaitressInfo(id){
 		try {
 			return await this.db(this.table)
 				.select('*')
-				.leftJoin('orders', 'order_dishes.order_id', 'orders.id')
-				.leftJoin('dishes', 'order_dishes.dishes_id', 'dishes.id')
-				.where('orders.token', token);
+				.leftJoin('users', 'employees.user_id', 'users.id')
+				.leftJoin('positions', 'employees.position_id', 'positions.id')
+				.leftJoin('restaurant', 'employees.restaurant_id', 'restaurant.id')
+				.where('employees.user_id', id)
+				.andWhere('employees.deleted', 0)
+				.then(result => result[0]);
 		}
 		catch(err) {
 			logger.error('ERROR', err);
 			return err;
 		}
 	}
-
 }
 
-module.exports = new OrderDishesModel();
+module.exports = new EmployeeModel();

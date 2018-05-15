@@ -24,5 +24,6 @@ module.exports = schema = {
 	cart:{},
 	cart_dishes:{},
 	order:{},
-	order_dishes:{}
+	order_dishes:{},
+	employee:{}
 };

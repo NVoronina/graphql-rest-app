@@ -278,14 +278,14 @@ document.getElementById('language').onchange = function(){
 function validate(data, regexp, errorText, attr){
 	if(data.value.match(regexp)){
 		data.className = 'valid';
-		var toRemove = document.getElementById(attr);
+		let toRemove = document.getElementById(attr);
 		if(toRemove) {
 			toRemove.parentNode.removeChild(toRemove);
 		}
 	} else {
 		data.setAttribute('class','error');
 		if(!document.getElementById(attr)) {
-			var error = document.createElement('p');
+			let error = document.createElement('p');
 			error.className = "error_text";
 			error.id = attr;
 			data.style.marginTop = 0;
@@ -293,4 +293,35 @@ function validate(data, regexp, errorText, attr){
 			data.parentNode.insertBefore(error, data);
 		}
 	}
+}
+
+function getFooter(){
+	var year = new Date().getFullYear();
+	var htmlFooter = `
+	<div class="col-4">
+		<div>
+			<h4><img class="footer_logo" src="../assets/images/waiter-148663.svg"> ${footer_info[lang].app_name}</h4>
+			<p>${footer_info[lang].about}</p>
+		</div>
+	</div>
+	<div class="col-4">
+		<div>
+			<h4>${footer_info[lang].address_w}</h4>
+			<p>${footer_info[lang].phone}: +7 (812) 230-23-23</p>
+			<p>${footer_info[lang].address}</p>
+		</div>
+	</div>
+	<div class="col-4">
+		<div>
+			<h4>${footer_info[lang].social}</h4>
+			<i class="fab fa-facebook-square"></i>
+			<i class="fab fa-vk"></i>
+			<i class="fab fa-google-plus-g"></i>
+			<i class="fab fa-twitter"></i>		
+			<i class="fab fa-instagram"></i>	
+		</div>
+	</div>
+	<p class="footer_rights">${year} ${footer_info[lang].year_rights}</p>
+`;
+	document.getElementById('footer_info').innerHTML = htmlFooter;
 }

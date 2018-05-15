@@ -26,6 +26,29 @@ a.link_no_line{
     background: rgba(255, 255, 255, 0.9);
 }
 /**
+footer
+ */
+.footer{
+    margin-top: 2rem;
+    padding-top:1rem;
+    background: rgba(11, 5, 251, 0.3);
+    color:rgba(255, 255, 255, 0.8);;
+}
+#footer_info>div>div{
+    background: rgba(0, 0, 0, 0.3);
+    padding:.5em;
+    margin:.2em;
+    min-height: 12rem;
+}
+.footer_logo{
+    fill:white;
+    height:3em;
+}
+.footer_rights{
+    text-align: right;
+    width:100%
+}
+/**
 header
  */
 .header{
@@ -316,3 +339,95 @@ p.error_text{
 @-moz-keyframes    fade-in {   0% { opacity: 0.1; } 25% {opacity: 0.3;} 50% {opacity:0.5;} 75% {opacity:0.7;} 100% { opacity: 1; }   }
 @-o-keyframes      fade-in {   0% { opacity: 0.1; } 25% {opacity: 0.3;} 50% {opacity:0.5;} 75% {opacity:0.7;}  100% { opacity: 1; }   }
 @keyframes         fade-in {   0% { opacity: 0.1; } 25% {opacity: 0.3;} 50% {opacity:0.5;} 75% {opacity:0.7;}  100% { opacity: 1; }   }
+/**
+рестораны
+ */
+.rest_name{
+    font-size:1.5em;
+    width:100%;
+    color:white;
+    background-color: lightgreen;
+    /*border-bottom: 1px solid #575757;*/
+}
+.rest_logo{
+    text-align: center;
+    /*border: 1px solid #575757;*/
+    padding:.5em;
+
+}
+.restaurant_block{
+    margin:.5em;
+    padding:.5em;
+    text-align: center;
+    background:white;
+}
+/**
+рестораны
+ */
+.restaurant_block{
+    padding: 2em;
+    text-align: center;
+}
+img.restaurant_photo:first-child{
+    width: 100%;
+}
+img.restaurant_photo{
+    width: 50%;
+}
+.dish_name{
+    font-size: 1.2em;
+}
+ul{
+    list-style: none;
+    padding:0;
+    margin-left:.2em;
+}
+ul>li{
+    padding:.5em;
+    margin:0;
+}
+
+.restorans_menu>li{
+    padding:1em;
+    text-transform: uppercase;
+    cursor:pointer;
+}
+ul>li img{
+    width:100%;
+}
+ul.dishes_list{
+    text-transform: none;
+}
+/**
+регистрация
+ */
+
+#reg_form{
+    padding:2em;
+}
+.form_header h2{
+    color:#fff;
+}
+.form_header{
+    margin:1em;
+}
+#content{
+    background: rgba(255 255 255 0.8);
+    box-shadow: 0 0 10px rgba(54, 54, 54, 0.7);
+}
+.valid{
+    border:1px solid #02ee1d;
+}
+.error{
+    border:1px solid #ee8d77;
+}
+.order_waitress{
+    background: #ffe160;
+    margin:.5em;
+    padding:1em;
+}
+.order_free{
+    background:#ee8d77;
+    margin:.5em;
+    padding:1em;
+}
