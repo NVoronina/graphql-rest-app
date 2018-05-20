@@ -1,9 +1,8 @@
 const graphql = require('graphql');
 const menuType = require('../menu/menuSchema');
 const restoranPhotoType = require('../restaurantPhoto/restaurantPhotoSchema');
-
 const fetch = require('node-fetch');
-const BASE_URL = 'http://localhost:5000';
+const BASE_URL = process.env.HOST + ':' + process.env.PORT;
 
 module.exports = restoranType = new graphql.GraphQLObjectType({
 	name: 'Restoran',
