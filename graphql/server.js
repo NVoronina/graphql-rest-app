@@ -2,7 +2,6 @@ const express = require('express');
 const fs = require('fs');
 const graphqlHTTP = require('express-graphql');
 const fetch = require('node-fetch');
-const BASE_URL = 'http://localhost:5000';
 const schema = require('./schemas');
 const path = require('path');
 const app = express();
@@ -72,4 +71,6 @@ async function getHtml(fileName, res){
 	});
 }
 app.listen(4000);
+console.log(process.env.PORT);
+
 console.log('Running a GraphQL API server at localhost:4000/graphql');
