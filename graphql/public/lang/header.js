@@ -1,9 +1,9 @@
 var main_menu = {
 	en:[
-		'Home','About','News','Restorans'
+		'Home','About','Download','Restaurants'
 	],
 	ru:[
-		'Главная','О нас','Новости','Ресторан'
+		'Главная','О нас','Скачать','Рестораны'
 	]
 };
 

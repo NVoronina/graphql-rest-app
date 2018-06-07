@@ -2,3 +2,6 @@
 api/node_modules
 graphql/node_modules
 api/logger/logs/app.log
+api/package-lock.json
+graphql/package-lock.json
+
