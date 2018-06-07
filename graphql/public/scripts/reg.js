@@ -103,5 +103,6 @@ function getContent(){
 	getRegForm();
 	getHeader();
 	getQrReader();
+	getFooter();
 }
 getContent();

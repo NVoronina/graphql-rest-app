@@ -74,7 +74,7 @@ function closeMenu(){
 }
 function getMenu(){
 	var menu_list = '';
-	var href = ['/', '/about', '/news', '/restaurants'];
+	var href = ['/', '/about', '/download', '/restaurants'];
 	var cnt = 0;
 	var media = window.matchMedia("(max-width: 845px)");
 	if (media.matches) { // If media query matches

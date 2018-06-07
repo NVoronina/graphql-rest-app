@@ -104,5 +104,6 @@ function getContent(){
 	getHeader();
 	getRestoransList();
 	getQrReader();
+	getFooter();
 }
 getContent();

@@ -214,6 +214,7 @@ function getContent(){
 	getHeader();
 	// getQrReader();
 	getGuestPage();
+	getFooter();
 }
 
 getContent();

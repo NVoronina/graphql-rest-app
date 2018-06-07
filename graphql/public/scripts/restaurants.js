@@ -40,5 +40,6 @@ function getContent(){
 	getHeader();
 	getRestaurantInfo();
 	getQrReader();
+	getFooter();
 }
 getContent();

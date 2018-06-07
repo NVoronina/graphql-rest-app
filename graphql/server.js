@@ -32,7 +32,9 @@ app.get('/restaurants', async (req, res) => {
 app.get('/restaurants/:id', async (req, res) => {
 	await getHtml('restaurant.html', res);
 });
-
+app.get('/download', async (req, res) => {
+	await getHtml('download.html', res);
+});
 app.get('/restaurants/:id', async (req, res) => {
 	await getHtml('restaurant.html', res);
 });

@@ -4,5 +4,6 @@ function getContent(){
 	getMenu();
 	getHeader();
 	getQrReader();
+	getFooter();
 }
 getContent();
